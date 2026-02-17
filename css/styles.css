@@ -1,46 +1,93 @@
+/* Importación de Google Fonts: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Paleta de colores moderna */
+    --color-fondo: #f8fafc;        /* Gris casi blanco muy limpio */
+    --color-principal: #6366f1;    /* Índigo vibrante */
+    --color-principal-dark: #4f46e5;
+    --color-encabezado: #1e293b;   /* Azul pizarra oscuro */
+    --color-texto: #334155;        /* Gris suave para lectura */
+    --color-seccion: #ffffff;      /* Blanco puro para tarjetas */
+    --color-footer: #e2e8f0;       /* Gris claro para contraste */
+    
+    /* Variables de tipografía y espaciado */
+    --font-main: 'Inter', sans-serif;
+    --line-height: 1.6;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: var(--font-main);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     margin: 0;
+    line-height: var(--line-height);
+    -webkit-font-smoothing: antialiased; /* Mejora la definición de la fuente */
 }
 
 /* Encabezado */
 header {
-    background-color: #2c3e50;
+    background-color: var(--color-encabezado);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 3rem 1rem; /* Más aire para un look moderno */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em; /* Estilo tipográfico moderno */
 }
 
 /* Contenido */
 main {
-    padding: 20px;
+    max-width: 900px; /* Evita que el texto sea demasiado largo para leer */
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 section {
-    background-color: white;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
+    background-color: var(--color-seccion);
+    margin-bottom: 24px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    border: 1px solid rgba(0,0,0,0.05);
 }
+
+h2, h3 {
+    color: var(--color-encabezado);
+    margin-top: 0;
+    font-weight: 600;
+}
+
+h2 { font-size: 1.8rem; }
 
 /* Botón */
 button {
-    padding: 8px 12px;
-    background-color: #2c3e50;
+    font-family: var(--font-main);
+    font-weight: 600;
+    padding: 12px 24px;
+    background-color: var(--color-principal);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: all 0.2s ease; /* Transición suave */
 }
 
 button:hover {
-    background-color: #1a252f;
+    background-color: var(--color-principal-dark);
+    transform: translateY(-1px); /* Efecto de elevación */
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 /* Pie de página */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #ddd;
+    padding: 2rem;
+    background-color: var(--color-footer);
+    color: #64748b;
+    font-size: 0.9rem;
 }
