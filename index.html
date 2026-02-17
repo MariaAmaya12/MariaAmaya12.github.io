@@ -40,6 +40,40 @@
             <button id="boton">Mostrar habilidad</button>
         </section>
     </main>
+<section id="contacto">
+  <h2>Contacto</h2>
+
+  <p>
+    <strong>Correo:</strong>
+    <a href="mailto:tuemail@ejemplo.com">paulaamayavelasquez@gmail.com</a>
+  </p>
+
+  <p>
+    <strong>LinkedIn:</strong>
+    <a href="https://www.linkedin.com/in/mar%C3%ADa-velasquez-01698937a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+      Ver perfil ↗
+    </a>
+  </p>
+
+
+  <h3>Formulario básico</h3>
+  <form id="form-contacto" onsubmit="return false;">
+    <label>
+      Nombre:
+      <input type="text" id="nombre" placeholder="Tu nombre" />
+    </label>
+    <br><br>
+
+    <label>
+      Mensaje:
+      <textarea id="mensaje" rows="4" placeholder="Hola Maria, me gustaría hablar sobre..."></textarea>
+    </label>
+    <br><br>
+
+    <button type="button" id="btnCopiar">Copiar mensaje</button>
+    <p id="hintCopiar" aria-live="polite"></p>
+  </form>
+</section>
 
     <footer>
         <p>&copy; 2026 - Página personal</p>
@@ -49,3 +83,4 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
